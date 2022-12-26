@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Manrope:wght@800&display=swap");
+
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+button {
+  user-select: none;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--dark-grayish-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.container {
+  background-color: var(--grayish-blue);
+  padding: 1.25rem 1.25rem 3rem;
+  border-radius: 1.2rem;
+  position: relative;
+  color: #fff;
+}
+.container h1 {
+  color: var(--neon-green);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  margin-bottom: 1.25rem;
+  /* font-weight: 800; */
+}
+
+.container p {
+  font-size: 1.75rem;
+  color: var(--light-cyan);
+  padding-bottom: 2rem;
+  line-height: 1.5;
+}
+.container picture img {
+  position: relative;
+  background-color: var(--grayish-blue);
+}
+.container picture::before {
+  content: "";
+  width: 40%;
+  height: 1px;
+  right: 1.25rem;
+  bottom: 3.8rem;
+  display: block;
+  position: absolute;
+  background-color: var(--light-cyan);
+  z-index: 100;
+}
+
+.container picture::after {
+  content: "";
+  width: 45%;
+  border-radius: 50%;
+  height: 1px;
+  background-color: var(--light-cyan);
+  position: relative;
+  display: block;
+  left: 0;
+  bottom: 0.74rem;
+}
+.container button {
+  padding: 1.25rem;
+  bottom: -2rem;
+  background-color: var(--neon-green);
+  transition: background-color 0.3s ease-in-out;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  cursor: pointer;
+}
+
+.container button:hover {
+  background-color: hsl(150, 59%, 54%);
+}
+
+@media (min-width: 500px) {
+  .container {
+    max-width: 480px;
+  }
+}
